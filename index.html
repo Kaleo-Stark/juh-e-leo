@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Tempo Juntos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap');
+        *{scroll-behavior: smooth !important;}
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #000;
+            color: white;
+            
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .overlay img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+        .overlay.active {
+            visibility: visible;
+            opacity: 1;
+        }
+        .img-mini {
+            height: 90%;
+            object-fit: cover;
+        }
+
+        ::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            background-color: #F5F5F5;
+        }
+
+        ::-webkit-scrollbar {
+            width: 7px;
+            background-color: #F5F5F5;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border-radius: 0px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+            background-color: #7f1d1d;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex flex-col justify-center items-center text-center bg-black">
+        <div class="absolute inset-0 bg-gradient-to-b from-black via-red-900 to-black opacity-75"></div>
+        <h1 class="text-4xl md:text-6xl font-bold text-white relative z-10 font-playfair">❤️ Júlia e Kaleo ❤️</h1>
+        <h2 class="text-4xl md:text-4xl text-white relative z-10 font-playfair">Nosso Tempo Juntos</h2>
+        <div class="flex flex-col md:flex-row gap-6 mt-6 relative z-10">
+            <div class="text-center">
+                <p class="text-lg font-light">Desde o primeiro beijo</p>
+                <p id="timer1" class="text-3xl font-semibold text-red-500"></p>
+            </div>
+            <div class="text-center">
+                <p class="text-lg font-light">Desde que oficializamos</p>
+                <p id="timer2" class="text-3xl font-semibold text-red-500"></p>
+            </div>
+        </div>
+        <div class="mt-8 relative z-10">
+            <a href="#historia" class="px-6 py-2 bg-red-600 hover:bg-red-700 transition rounded-full text-white text-lg">📖 Nossa História</a>
+            <a href="#aventuras" class="px-6 py-2 bg-transparent border border-red-600 hover:bg-red-600 transition rounded-full text-white text-lg ml-4">✈️ Nossas Aventuras</a>
+        </div>
+    </section>
+
+    <!-- Nossa História -->
+    <section id="historia" class="px-6 py-16 bg-black text-white text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-red-500 mb-4 font-playfair">Nossa História</h2>
+            <div class="w-16 h-1 bg-red-600 mx-auto mb-6"></div>
+            <p class="text-lg leading-relaxed opacity-0 transition-opacity duration-1000" id="historia-texto">
+                Tudo começou na faculdade, onde éramos representantes de sala. Foi em uma reunião que nos conhecemos. 
+                Depois da reunião, jogamos sinuca juntos, e naquele momento, eu já sabia que havia algo especial nela. <span class="italic text-red-400">Inteligente, simpática e apaixonada por tecnologia</span>, 
+                Júlia me encantou desde o primeiro instante. Mas havia um detalhe: ela namorava. Então, segui minha vida, apenas admirando-a de longe.
+            </p>
+            <p class="text-lg leading-relaxed mt-6 opacity-0 transition-opacity duration-1000" id="historia-texto">
+                O tempo passou, e um dia, por acaso, começamos a conversar sobre carreira e tecnologia. As conversas se tornaram mais frequentes, leves e divertidas. 
+                Descobrimos paixões em comum, como o <span class="font-semibold text-red-400">amor por carros antigos</span>, e aos poucos, nossa conexão se fortaleceu. Quando ela terminou seu relacionamento, 
+                continuamos conversando, sem pretensões. Mas sem perceber, algo a mais foi surgindo entre nós.
+            </p>
+            <p class="text-lg leading-relaxed mt-6 opacity-0 transition-opacity duration-1000" id="historia-texto">
+                Foi numa noite especial, <span class="font-semibold text-red-400">sentados na escada da casa dela</span>, que tudo mudou. Em um momento espontâneo, pedi para testar algo e dei um beijo em seu pescoço. 
+                <span class="italic text-red-400">O arrepio dela disse tudo.</span> Foi ali que nossa história realmente começou.
+            </p>
+            <p class="text-lg leading-relaxed mt-6 opacity-0 transition-opacity duration-1000" id="historia-texto">
+                No início, nenhum dos dois queria um relacionamento sério. Mas a verdade é que já estávamos juntos de um jeito que não dava mais para ignorar. Seis meses se passaram, e eu percebi que 
+                <span class="font-semibold text-red-400">não queria mais apenas "ficar" com ela.</span> Então, naquele mesmo lugar onde tudo começou, eu repeti o gesto que fez nossa história acontecer. 
+                Tirei seu cabelo do pescoço, a beijei da mesma forma e, dessa vez, acrescentei um detalhe a mais: <span class="font-semibold text-red-400">uma aliança.</span>
+            </p>
+            <p class="text-lg leading-relaxed mt-6 opacity-0 transition-opacity duration-1000" id="historia-texto">
+                Hoje, celebramos <span class="font-semibold text-red-400">um ano desde aquele primeiro beijo.</span> Um ano desde que minha vida mudou para melhor.
+            </p>
+        </div>
+    </section>
+
+    <!-- Script para efeito de fade-in -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const elementos = document.querySelectorAll("#historia-texto");
+            let delay = 200;
+            elementos.forEach((el) => {
+                setTimeout(() => {
+                    el.classList.remove("opacity-0");
+                    el.classList.add("opacity-100");
+                }, delay);
+                delay += 500; 
+            });
+        });
+    </script>
+
+
+    <!-- Nossas Aventuras -->
+    <section id="aventuras" class="px-6 py-16 bg-black text-white">
+        <h2 class="text-3xl md:text-4xl font-bold text-red-500 text-center mb-6">Nossas Aventuras</h2>
+        <div class="w-16 h-1 bg-red-600 mx-auto mb-6"></div>
+        <div id="aventuras-container" class="space-y-12"></div>
+    </section>
+
+    <!-- Overlay para exibição da imagem expandida -->
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center hidden">
+        <img id="expandedImg" class="max-w-[90%] max-h-[90%] rounded-lg">
+    </div>
+
+     <!-- Script para carregar JSON e exibir a seção -->
+     <script>
+        const aventurasJSON = [
+            {
+                "titulo": "Campos do Jordão - 03/2025",
+                "lugares": [
+                    {
+                        "imagem": "./fotos/campos-jordao/3-varinhas/1.jpg",
+                        "descricao": "Restaurante 3 Varinhas"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/3-varinhas/2.jpg",
+                        "descricao": "Restaurante 3 Varinhas"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/3-varinhas/3.jpg",
+                        "descricao": "Restaurante 3 Varinhas"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/3-varinhas/4.jpg",
+                        "descricao": "Restaurante 3 Varinhas"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/3-varinhas/5.jpg",
+                        "descricao": "Restaurante 3 Varinhas"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/3-varinhas/6.jpg",
+                        "descricao": "Restaurante 3 Varinhas"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/3-varinhas/7.jpg",
+                        "descricao": "Restaurante 3 Varinhas"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/3-varinhas/8.jpg",
+                        "descricao": "Restaurante 3 Varinhas"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/3-varinhas/9.jpg",
+                        "descricao": "Restaurante 3 Varinhas"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/3-varinhas/10.jpg",
+                        "descricao": "Restaurante 3 Varinhas"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/a-gente/1.jpg",
+                        "descricao": "Nós"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/a-gente/3.jpg",
+                        "descricao": "Nós"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/a-gente/4.jpg",
+                        "descricao": "Nós"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/a-gente/5.jpg",
+                        "descricao": "Nós"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/baden-baden/1.jpg",
+                        "descricao": "Fabrica Baden-Baden"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/baden-baden/2.jpg",
+                        "descricao": "Fabrica Baden-Baden"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/baden-baden/3.jpg",
+                        "descricao": "Fabrica Baden-Baden"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/carde/1.jpg",
+                        "descricao": "Museu Carde"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/carde/2.jpg",
+                        "descricao": "Museu Carde"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/carde/3.jpg",
+                        "descricao": "Museu Carde"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/carde/4.jpg",
+                        "descricao": "Museu Carde"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/carde/5.jpg",
+                        "descricao": "Museu Carde"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/carde/6.jpg",
+                        "descricao": "Museu Carde"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/carde/7.jpg",
+                        "descricao": "Museu Carde"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/carde/8.jpg",
+                        "descricao": "Museu Carde"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/carde/9.jpg",
+                        "descricao": "Museu Carde"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/ducha-prata/1.jpg",
+                        "descricao": "Ducha de Prata"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/ducha-prata/2.jpg",
+                        "descricao": "Ducha de Prata"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/ducha-prata/3.jpg",
+                        "descricao": "Ducha de Prata"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/ducha-prata/4.jpg",
+                        "descricao": "Ducha de Prata"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/ducha-prata/5.jpg",
+                        "descricao": "Ducha de Prata"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/ducha-prata/6.jpg",
+                        "descricao": "Ducha de Prata"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/ducha-prata/7.jpg",
+                        "descricao": "Ducha de Prata"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/ducha-prata/8.jpg",
+                        "descricao": "Ducha de Prata"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/ducha-prata/9.jpg",
+                        "descricao": "Ducha de Prata"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/ducha-prata/10.jpg",
+                        "descricao": "Ducha de Prata"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/ducha-prata/11.jpg",
+                        "descricao": "Ducha de Prata"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/fabrica-chocolate/1.jpg",
+                        "descricao": "Fabrica de Chocolates"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/fabrica-chocolate/2.jpg",
+                        "descricao": "Fabrica de Chocolates"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/fabrica-chocolate/3.jpg",
+                        "descricao": "Fabrica de Chocolates"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/restaurante/1.jpg",
+                        "descricao": "Restaurante"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/restaurante/2.jpg",
+                        "descricao": "Restaurante"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/restaurante/3.jpg",
+                        "descricao": "Restaurante"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/restaurante/4.jpg",
+                        "descricao": "Restaurante"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/restaurante/5.jpg",
+                        "descricao": "Restaurante"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/restaurante/6.jpg",
+                        "descricao": "Restaurante"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/restaurante/7.jpg",
+                        "descricao": "Restaurante"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/restaurante/8.jpeg",
+                        "descricao": "Restaurante"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/villa-capivari/1.jpg",
+                        "descricao": "Vila Capivari"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/villa-capivari/2.jpg",
+                        "descricao": "Vila Capivari"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/villa-capivari/3.jpg",
+                        "descricao": "Vila Capivari"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/villa-capivari/4.jpg",
+                        "descricao": "Vila Capivari"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/villa-capivari/5.jpg",
+                        "descricao": "Vila Capivari"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/villa-capivari/6.jpg",
+                        "descricao": "Vila Capivari"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/villa-capivari/7.jpg",
+                        "descricao": "Vila Capivari"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/villa-capivari/8.jpg",
+                        "descricao": "Vila Capivari"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/villa-capivari/9.jpg",
+                        "descricao": "Vila Capivari"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/villa-capivari/10.jpg",
+                        "descricao": "Vila Capivari"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/villa-capivari/11.jpg",
+                        "descricao": "Vila Capivari"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/villa-capivari/12.jpg",
+                        "descricao": "Vila Capivari"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/villa-capivari/13.jpg",
+                        "descricao": "Vila Capivari"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/villa-capivari/14.jpg",
+                        "descricao": "Vila Capivari"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/villa-capivari/15.jpg",
+                        "descricao": "Vila Capivari"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/villa-capivari/16.jpg",
+                        "descricao": "Vila Capivari"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/villa-capivari/17.jpg",
+                        "descricao": "Vila Capivari"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/vista-chinesa/1.jpg",
+                        "descricao": "Vista chinesa"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/vista-chinesa/2.jpg",
+                        "descricao": "Vista chinesa"
+                    },
+                    {
+                        "imagem": "./fotos/campos-jordao/vista-chinesa/3.jpg",
+                        "descricao": "Vista chinesa"
+                    },
+                ]
+            }
+        ];
+
+        function carregarAventuras() {
+            const container = document.getElementById("aventuras-container");
+            container.innerHTML = ""; 
+
+            aventurasJSON.forEach(aventura => {
+                const secao = document.createElement("div");
+                secao.innerHTML = `
+                    <h3 class="text-2xl font-semibold mb-4">${aventura.titulo}</h3>
+                    <div class="flex overflow-x-auto space-x-4 pb-4">
+                        ${aventura.lugares.map(lugar => `
+                            <div class="w-60 shrink-0">
+                                <img src="${lugar.imagem}" class="img-mini rounded-lg hover:scale-105 transition cursor-pointer" onclick="expandImage('${lugar.imagem}')">
+                                <p class="text-center mt-2">${lugar.descricao}</p>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+                container.appendChild(secao);
+            });
+        }
+
+        function expandImage(src) {
+            document.getElementById("expandedImg").src = src;
+            document.getElementById("overlay").classList.remove("hidden");
+        }
+
+        document.getElementById("overlay").addEventListener("click", function() {
+            this.classList.add("hidden");
+        });
+
+        // Carregar as aventuras ao iniciar
+        carregarAventuras();
+    </script>
+
+    <!-- Rodapé -->
+    <footer class="py-12 text-center bg-red-900 text-white">
+        <p class="text-lg" style="    margin-bottom: 20px;">"Cada momento ao seu lado é o melhor da minha vida."</p>
+        <a href="#historia" class="mt-4 px-4 py-2 bg-white text-red-600 font-semibold rounded-full hover:bg-gray-200 transition">Rever Nossa História</a>
+    </footer>
+
+    <!-- Overlay para exibição da imagem expandida -->
+    <div id="overlay" class="overlay" onclick="closeImage()">
+        <img id="expandedImg" src="">
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        function calcularTempo(desde, id) {
+            function atualizar() {
+                const agora = new Date();
+                const inicio = new Date(desde);
+                
+                let anos = agora.getFullYear() - inicio.getFullYear();
+                let meses = agora.getMonth() - inicio.getMonth();
+                let dias = agora.getDate() - inicio.getDate();
+                let horas = agora.getHours() - inicio.getHours();
+                let minutos = agora.getMinutes() - inicio.getMinutes();
+                let segundos = agora.getSeconds() - inicio.getSeconds();
+
+                if (segundos < 0) {
+                    segundos += 60;
+                    minutos -= 1;
+                }
+                if (minutos < 0) {
+                    minutos += 60;
+                    horas -= 1;
+                }
+                if (horas < 0) {
+                    horas += 24;
+                    dias -= 1;
+                }
+                if (dias < 0) {
+                    let ultimoMes = new Date(agora.getFullYear(), agora.getMonth(), 0).getDate();
+                    dias += ultimoMes;
+                    meses -= 1;
+                }
+                if (meses < 0) {
+                    meses += 12;
+                    anos -= 1;
+                }
+
+                document.getElementById(id).innerHTML = `
+                    <span class="text-xl font-bold">${anos} ano, ${meses} meses, ${dias} dias</span> <br>
+                    <span class="text-xl">${horas}h ${minutos}m ${segundos}s</span>
+                `;
+            }
+
+            atualizar();
+            setInterval(atualizar, 1000);
+        }
+
+        // Chamar a função para diferentes contadores
+        calcularTempo("2024-03-20", "timer1");
+        calcularTempo("2024-08-20", "timer2");
+    </script>
+
+</body>
+</html>
